@@ -1,1 +1,1 @@
-# Fantasy-Music-Leauge
+# Fantasy-Music-League
