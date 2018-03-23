@@ -1,0 +1,146 @@
+<style screen="media">
+
+body {
+	background-color: rgb(226, 158, 247);
+}
+
+#main-bio-block {
+			width: 600px;
+			height: 260px;
+			position: relative;
+			background: rgba(50, 50, 58, 0.5);
+			margin: 8px;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			float: left;
+		}
+
+		.user-image {
+			width: 200px;
+			height: 200px;
+			border: 3px solid black;
+			position: relative;
+			float: left;
+			margin: 10px;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+
+
+		.info {
+			position: relative;
+			width: 350px;
+			height: 200px;
+			background: ;
+			float: left;
+			margin: 10px;
+			padding: 4px 4px 4px 8px;
+			border-radius: 15px;
+
+		}
+		
+		p {
+			font-size: 200%;
+		}
+
+		#user-name {
+			position: relative;
+			height: 30px;
+			width: 200px;
+			background: rgba(78, 96, 124, 0.4);
+			float: left;
+			margin-left: 10px;
+			border-radius: 15px;
+			text-align: center;
+			border: 1px solid rgba(197, 204, 216, 0.4);
+
+		}
+
+		.modal-btn {
+			height: 30px;
+			width: 150px;
+			background: rgba(35, 27, 150, 0.4);
+			position: relative;
+			float: left;
+			margin-left: 10px;
+			text-align: center;
+			border-radius: 15px;
+			left: 30px;
+			border: 1px solid rgba(197, 204, 216, 0.4);
+		}
+
+		.modal-btn:hover {
+			background: rgba(8, 91, 224, 0.8);
+		}
+
+		.modal-info-box {
+			height: 260px;
+			width: 600px;
+			/*background: rgb(32, 28, 83);*/
+			z-index: 8;
+			position: absolute;
+			display: none;
+			border-radius: 10px;
+			background-image: url('http://www.4usky.com/data/out/40/164345614-grey-blue-wallpapers.jpg');
+		}
+
+
+
+		.info-content {
+			height: 180px;
+			background: rgba(28, 32, 83,0.7);
+			margin: 40px 0px 0px 0px;
+			border-radius: 0px;
+			padding: 8px 8px 8px 8px;
+			color: white;
+		}
+
+		.force-block {
+			width: auto;
+			height: auto;
+			background: linear-gradient(rgb(226, 158, 247), indigo);
+		}
+
+</style>
+
+<div class="force-block"> 
+{{#each fml}} 	
+		<div id="main-bio-block">
+			<div class="performer-image"><img src="{{this.image}}" class="user-image">
+			</div>
+				<div class="info" id="info-modal">
+				<p><strong>Genre:</strong> {{this.genre}}</p>
+				<p><strong>Cost:</strong> ${{contractCost}}</p>
+				<p><strong>Chart Position:</strong> {{chartPosition}}  
+				</div>
+						<div id="user-name"><p>{{this.handle}}</p></div>
+								<div class="modal-btn" id="bio-modal" onclick="toggleinfo('#info-{{@index}}')"><p>About Artist</p></div>
+										<div class="modal-btn" id="accolades-modal"><p>Sign Artist</p></div>
+
+											<div class="modal-info-box" id="info-{{@index}}">
+												<span class="close" onclick="toggleinfo('#info-{{@index}}')">
+												&times;
+												</span>
+												<div class="info-content">
+													<p>{{this.bio}}</p>
+												</div>
+											</div>
+
+		</div>
+{{/each}}		
+
+</div>
+		
+
+
+
+		<script type="text/javascript">
+			function toggleinfo(id){
+			console.log("button connected at least!")
+            $(id).toggle();
+        }
+
+
+			
+		</script>
