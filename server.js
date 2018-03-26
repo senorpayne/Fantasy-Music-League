@@ -28,59 +28,38 @@ app.get("/artist", function(req, res) {
 	})
 });
 
-app.get("/champions", function(req, res){
-	connection.query("SELECT * from angelRoster WHERE titles >= '1' ORDER by titles DESC", function(err, data){
-		res.render("champions", {queens: data} );
+app.get("/profile", function(req, res){
+	connection.query("SELECT * from fml_artist WHERE titles >= '1' ORDER by titles DESC", function(err, data){
+		res.render("champions", {taco: data} );
 	})
 });
 
-app.get("/wins", function(req, res){
-	connection.query("SELECT * from angelRoster ORDER by wins DESC", function(err, data){
+app.get("/profile/label", function(req, res){
+	connection.query("SELECT * from fml_artist", function(err, data){
+		res.render("teamSelect", {fml: data} );
+	})
+});
+
+// create rules table in our database
+app.get("/rules", function(req, res){
+	connection.query("SELECT * from rules", function(err, data){
 		res.render("index", {taco: data} );
 	})
 });
 
-app.get("/paid", function(req, res){
-	connection.query("SELECT * from angelRoster ORDER by earnings DESC", function(err, data){
+
+app.get("/league", function(req, res){
+	connection.query("SELECT * from fml_artist ORDER by earnings DESC", function(err, data){
 		res.render("index", {taco: data} );
 	})
 });
+// ******************************
+// POSTING TO MYSQL
 
-app.get("/medals", function(req, res){
-	connection.query("SELECT * from angelRoster WHERE gold or silver or bronze >= '1' ORDER by gold DESC", function(err, data){
-		res.render("champions", {queens: data} );
-	})
-});
 
-      // app.get("/home", function(req, res){
-      // 	connection.query("SELECT * from roster", function(err, data){
-      // 		res.render("home", {light: data} );
-      // 	})
-      // });
-
-      app.get("/home", function(req, res){
-      	res.render("home", {tabs: res})
-      });
-
- //      app.put("/home", function(req, res) {
- //      	connection.query(
- //      		"UPDATE angelRoster SET earnings = ?, wins = ?, loss = ?, gold = ?, silver = ?, bronze = ? WHERE handle = ?",
- //      		[req.body.earnings, req.body.wins, req.body.loss, req.body.gold, req.body.silver, req.body.bronze],
- //      		function(err, result) {
- //      			if (err) {
-	//         // If an error occurred, send a generic server faliure
-	//         return res.status(500).end();
-	//     }
-	//     else if (result.changedRows === 0) {
-	//         // If no rows were changed, then the ID must not exist, so 404
-	//         return res.status(404).end();
-	//     }
-	//     res.status(200).end();
-
-	// }
-	// );
- //      });
-
+// POSTING TO MYSQL
+// ******************************
+     
       app.listen(PORT, function() {
 	  // Log (server-side) when our server has started
 	  console.log("Server listening on: http://localhost:" + PORT);

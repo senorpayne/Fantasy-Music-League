@@ -1,0 +1,157 @@
+<style screen="media">
+		
+		body {
+			padding: 0px;
+			margin: 0px;
+			background-color: rgb(0,0,0);  
+			background-image: linear-gradient(-45deg, hsla(0,0%,0%,0), hsla(0,0%,0%,.05) );
+			background-size: 5px;
+
+			}
+			
+
+		#nav-main {
+			height: 300px;
+			width: 100%;
+			background: ;
+			background-image: url('https://lh3.googleusercontent.com/iREynowbYX0VN6TfNntwafPeBjEh5CE51GAgiw97SghZInqNvJL-vPjKlmx1le1nW25xJ0nMzAK98iaACdlhcuI0knMWCFzX2LX9J5yT4yiqNQPiU3W9sjbJbbunzlgKxYC-cOi-AAhJemYQ4Shk6SPxmXJ-WJFGj5UFSdHug3FZlthBZn8end2Vs7LIbJWeAKbWf-1m_4sxM-Suup-s2w1Zggn_o3chNG7ykKoIPZEmle0Eru_bJoH7rR-zg6TrP9WjdOs1G9q3y3yZ6ZeELdQYl04jEIQYqKF7WjxkhSSHVi4IzIrr3qSFIMc7-wOTawcTuEifNN213ZXbQpnzW-U0cc7ujjNh8wCJyMaL6DHrRJZgAmAkSh_1oUyNqQkBXzlAyktKMuecUbiRhjvc2sm9mO3o35mYaztSa-5K092-4pV046FYrNrBiwUKF-526LV9EAy71YVze3DySCjqifRL05slpgm50-rfvq6scwkLnfXVcTeXOUuXplyafSyvnseXs4kDGq7cnPtuOQRpvceis3KJeswrUMu3HP0EPvUoiMpIex_n9owGLZqNxcELIcoz93M7EQRLINVTXokmqGENupwg4whRFo1FDw=w1366-h520-no');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: relative;
+			border-bottom: 6px solid silver;
+		}
+		
+		#set-container {
+			width: 92%;
+			margin-left: 4%;
+		}
+
+		#user-music-label-name {
+			
+			height: 60px;
+			text-align: center;
+			position: relative;
+			width: auto;
+			background-color: rgba(54, 45, 66, 0.8);
+			font-size: 200%;
+			padding-top: 5px; 
+			border-bottom: 2px solid silver;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			color: white;
+		}
+		
+		#select-container {
+			width: 70%;
+			height: auto;
+			float: left;
+		}
+
+		.admin-info-box {
+			height: auto;
+			width: 370px;
+			background: rgba(54, 45, 66, 0.8);
+			float: right;
+			margin-left: 1px;
+			margin-top: 1px;
+			border: 1px solid silver;
+			position: relative;
+			top: 10px;
+			padding-top: 5px;
+			border-radius: 5px;
+			font-size: 200%;
+			color: white;
+		}
+		
+		li {
+			text-decoration: none;
+			overflow: hidden;
+		}
+
+		#base {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+    		width: 95%;
+    		position: relative;
+    		top: 10px;
+    		color: white;
+		}
+
+		#base tr {
+			height: 50px;
+			border-bottom: 2px solid silver;
+		}
+
+		#base th {
+			background-color: rgba(35, 27, 150, 0.4);
+    		color: white;
+    		border-top: 2px solid silver;
+		}
+
+		#base tr:nth-child(even){
+			background-color: rgba(50, 50, 58, 0.4);
+		}
+
+		#base tr:nth-child(odd){
+			background-color: rgba(55, 55, 61, 0.8);
+		}
+
+		#base tr:hover {
+			background-color: rgba(15, 15, 91, 0.4);
+		}
+		
+		#base th {
+			border-bottom: 2px solid silver;
+		}
+
+		#base td, th {
+			padding-left: 10px;
+		}
+
+
+</style>
+
+<div id="nav-main">
+	 
+	</div>
+	
+	<div id="set-container">
+		<div id="user-music-label-name"><p id="user-label-name">THE USERS LABEL/TEAM NAME GOES HERE</p></div>
+		 
+		 <div id="select-container">
+			 <table id="base">
+			 	<tr>
+				 	<th>Genre</th>
+				 	<th>Artist Name</th>
+				 	<th>Chart Position</th>
+				 	<th>Contract Cost</th>
+				 	<th>Cover</th>
+				 	<th>Remove</th>
+				</tr>
+				{{#each fml}}
+				<tr>
+					<td>{{this.genre}}</td>
+					<td>{{this.handle}}</td>
+					<td>{{this.chartPosition}}</td>
+					<td>{{this.contractCost}}</td>
+					<td>
+						<img style="width:35px;height:35px;" src="{{image}}">
+					</td>
+					<td>&#9949;</td>
+				</tr>
+				{{/each}}
+			</table>
+				
+		</div>
+
+			<div class="admin-info-box">
+				<ul>
+					<li><strong>BUDGET</strong><p id="budget">$250</p></li>
+					<li><strong>ARTIST SIGNED</strong><p id="signed-artists">Kendrick Lamar, Coldplay</p></li>
+					<li><strong></strong><p></p></li>
+					<li><strong></strong><p></p></li>
+
+				</ul>
+
+			</div>
+	</div>

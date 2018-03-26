@@ -13,6 +13,7 @@ body {
 			border-radius: 15px;
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			float: left;
+			border: 1px solid silver;
 		}
 
 		.user-image {
@@ -82,7 +83,7 @@ body {
 			position: absolute;
 			display: none;
 			border-radius: 10px;
-			background-image: url('http://www.4usky.com/data/out/40/164345614-grey-blue-wallpapers.jpg');
+			background-image: url('https://lh3.googleusercontent.com/xyR4j-1R6syhSL5iXGGbnhJ9EtTiN782B9josB07XWb5t800i7E17D2Pp39qMhlpNKLs1rt-g1p8e5QraEyiUuWkVKiR5QUQXAOP2tjdmP8dtuVG0QGAZHWbAb-TxW_ZjrP3JqC1khmGC89htgg8xaihc8NJfC-ntLa8dMTa2c7yp0t6PMPv9xtnLolylt5cdRRdofKB7-9hlgu73fKn5_WD6vQmPOftf_5P7fQ9tWVbKyNvk7HI6k_dd7IVEr0-VN8szu9QoPNe_n_uJgwropkx0PH4ja75iVpOD-QtyVMg-bTcOd5n8tobZ_gwnI8hI1bXmVZIcSVoPdfvL3Q4MtDLhkutyGLyUb5s6VOYaxZl80g7mVvGks6tl5sMIrlUTMur5iO5QieNiwQgGkywEg-TMPReUCCWIEvH5GIpLF9PSTE3CW4OnparQM0OOIsQcaU_GeIT4tHtBJiEzeFXbNIATCUBOH3V6xxZevQOziCLJN9hSM_nGQGo9l6jEukZspyq5OXWkyNLWiGnklYvksHdb_Wj0dlpzXfHexnnnfxcd1o2sypOAheJqRBv4coY7jKbRey3L02GYwUazQzpCTX_DX-ZkiCF-w1KzQ=w1060-h662-no');
 		}
 
 
@@ -112,7 +113,9 @@ body {
 				<div class="info" id="info-modal">
 				<p><strong>Genre:</strong> {{this.genre}}</p>
 				<p><strong>Cost:</strong> ${{contractCost}}</p>
-				<p><strong>Chart Position:</strong> {{chartPosition}}  
+				<p><strong>Chart Position:</strong> {{chartPosition}}</p> 
+				<p><strong>Play Count:</strong> {{playCount}}</p> 
+				<p><strong>Listeners:</strong> {{listener}}</p>    
 				</div>
 						<div id="user-name"><p>{{this.handle}}</p></div>
 								<div class="modal-btn" id="bio-modal" onclick="toggleinfo('#info-{{@index}}')"><p>About Artist</p></div>
@@ -136,6 +139,7 @@ body {
 
 
 		<script type="text/javascript">
+
 			function toggleinfo(id){
 			console.log("button connected at least!")
             $(id).toggle();

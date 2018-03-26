@@ -1,22 +1,3 @@
-DROP DATABASE IF EXISTS fml_db;
-CREATE DATABASE fml_db;
-USE fml_db;
-
-CREATE TABLE fml_artist (
-    artist_id INT(3) auto_increment NOT NULL,
-    handle VARCHAR(50) NULL,
-    genre VARCHAR(40) NULL,
-    image VARCHAR(200) NULL,
-    contractCost INT(11) NULL,
-    chartPosition INT(40) NULL,
-    bio VARCHAR(400) NULL,
-    playCount INT(11) NULL,
-    listeners INT (11) NULL,
-    PRIMARY KEY (artist_id)
-);
-
-select * from fml_artist;
-
 INSERT INTO 
 fml_artist (handle, genre, image, contractCost, chartPosition, bio)
 
@@ -68,21 +49,5 @@ VALUES (
         "https://images.genius.com/56d4da82aa62ce39d20e5cc2f3d4fc3f.700x700x1.jpg",
         100, 8,
         "24K Magic is the third studio album by American singer and songwriter Bruno Mars. It was released worldwide on November 18, 2016, by Atlantic Records. The follow-up to Mars's successful second album, Unorthodox Jukebox (2012), it explores genres similar to those of its predecessor, such as soul and funk."
-        ),
-        (
-        "Nipsey Hussle",
-        "Hip Hop",
-        "http://ihussle.com/images/NIPSEY_DIRTY%20FIN-v1.jpg",
-        50, 25,
-        "Victory Lap is the debut studio album by American rapper Nipsey Hussle. It was released on February 16, 2018 through All Money In No Money Out and Atlantic Records."
-        ),
-        (
-        "Taylor Swift",
-        "Pop",
-        "https://store.taylorswift.com/mm5/graphics/00000001/reputation_cd_550x550.jpg",
-        50, 4,
-        "Reputation is the sixth studio album by American singer-songwriter Taylor Swift. It was released on November 10, 2017, through Big Machine Records."
         )
         
-
-	   
