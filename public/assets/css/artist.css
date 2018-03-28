@@ -1,0 +1,102 @@
+body {
+	background-color: grey;
+}
+
+#main-bio-block {
+			width: 600px;
+			height: 260px;
+			position: relative;
+			background: rgba(50, 50, 58, 0.5);
+			margin: 8px;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			float: left;
+			border: 1px solid silver;
+		}
+
+		.user-image {
+			width: 200px;
+			height: 200px;
+			border: 3px solid black;
+			position: relative;
+			float: left;
+			margin: 10px;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+
+
+		.info {
+			position: relative;
+			width: 350px;
+			height: 200px;
+			background: ;
+			float: left;
+			margin: 10px;
+			padding: 4px 4px 4px 8px;
+			border-radius: 15px;
+
+		}
+		
+		p {
+			font-size: 200%;
+		}
+
+		#user-name {
+			position: relative;
+			height: 30px;
+			width: 200px;
+			background: rgba(78, 96, 124, 0.4);
+			float: left;
+			margin-left: 10px;
+			border-radius: 15px;
+			text-align: center;
+			border: 1px solid rgba(197, 204, 216, 0.4);
+
+		}
+
+		.modal-btn {
+			height: 30px;
+			width: 150px;
+			background: rgba(35, 27, 150, 0.4);
+			position: relative;
+			float: left;
+			margin-left: 10px;
+			text-align: center;
+			border-radius: 15px;
+			left: 30px;
+			border: 1px solid rgba(197, 204, 216, 0.4);
+		}
+
+		.modal-btn:hover {
+			background: rgba(8, 91, 224, 0.8);
+		}
+
+		.modal-info-box {
+			height: 260px;
+			width: 600px;
+			/*background: rgb(32, 28, 83);*/
+			z-index: 8;
+			position: absolute;
+			display: none;
+			border-radius: 10px;
+			background-image: url('https://lh3.googleusercontent.com/xyR4j-1R6syhSL5iXGGbnhJ9EtTiN782B9josB07XWb5t800i7E17D2Pp39qMhlpNKLs1rt-g1p8e5QraEyiUuWkVKiR5QUQXAOP2tjdmP8dtuVG0QGAZHWbAb-TxW_ZjrP3JqC1khmGC89htgg8xaihc8NJfC-ntLa8dMTa2c7yp0t6PMPv9xtnLolylt5cdRRdofKB7-9hlgu73fKn5_WD6vQmPOftf_5P7fQ9tWVbKyNvk7HI6k_dd7IVEr0-VN8szu9QoPNe_n_uJgwropkx0PH4ja75iVpOD-QtyVMg-bTcOd5n8tobZ_gwnI8hI1bXmVZIcSVoPdfvL3Q4MtDLhkutyGLyUb5s6VOYaxZl80g7mVvGks6tl5sMIrlUTMur5iO5QieNiwQgGkywEg-TMPReUCCWIEvH5GIpLF9PSTE3CW4OnparQM0OOIsQcaU_GeIT4tHtBJiEzeFXbNIATCUBOH3V6xxZevQOziCLJN9hSM_nGQGo9l6jEukZspyq5OXWkyNLWiGnklYvksHdb_Wj0dlpzXfHexnnnfxcd1o2sypOAheJqRBv4coY7jKbRey3L02GYwUazQzpCTX_DX-ZkiCF-w1KzQ=w1060-h662-no');
+		}
+
+
+
+		.info-content {
+			height: 180px;
+			background: rgba(28, 32, 83,0.7);
+			margin: 40px 0px 0px 0px;
+			border-radius: 0px;
+			padding: 8px 8px 8px 8px;
+			color: white;
+		}
+
+		.force-block {
+			width: auto;
+			height: auto;
+			background: linear-gradient(rgb(60, 60, 60), black);
+		}

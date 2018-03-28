@@ -15,6 +15,19 @@ CREATE TABLE fml_artist (
     PRIMARY KEY (artist_id)
 );
 
+CREATE TABLE user_artist (
+    artist_id INT(3) auto_increment NOT NULL,
+    handle VARCHAR(50) NULL,
+    genre VARCHAR(40) NULL,
+    image VARCHAR(200) NULL,
+    contractCost INT(11) NULL,
+    chartPosition INT(40) NULL,
+    bio VARCHAR(400) NULL,
+    playCount INT(11) NULL,
+    listeners INT (11) NULL,
+    PRIMARY KEY (artist_id)
+);
+
 select * from fml_artist;
 
 INSERT INTO 

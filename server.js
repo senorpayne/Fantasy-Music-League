@@ -22,43 +22,44 @@ app.use(bodyParser.json());
 
 // Data
 
-app.get("/artist", function(req, res) {
-	connection.query("SELECT * from fml_artist", function(err, data){
-		res.render("index", {fml: data} );
-	})
-});
-
-app.get("/profile", function(req, res){
-	connection.query("SELECT * from fml_artist WHERE titles >= '1' ORDER by titles DESC", function(err, data){
-		res.render("champions", {taco: data} );
-	})
-});
-
-app.get("/profile/label", function(req, res){
-	connection.query("SELECT * from fml_artist", function(err, data){
-		res.render("teamSelect", {fml: data} );
-	})
-});
-
-// create rules table in our database
-app.get("/rules", function(req, res){
-	connection.query("SELECT * from rules", function(err, data){
-		res.render("index", {taco: data} );
-	})
-});
+// app.get("/artist", function(req, res) {
+// 	connection.query("SELECT * from fml_artist", function(err, data){
+// 		res.render("index", {fml: data} );
+// 	})
+// });
 
 
-app.get("/league", function(req, res){
-	connection.query("SELECT * from fml_artist ORDER by earnings DESC", function(err, data){
-		res.render("index", {taco: data} );
-	})
-});
+// app.get("/profile/label", function(req, res){
+// 	connection.query("SELECT * from user_artist", function(err, data){
+// 		res.render("teamSelect", {fml: data} );
+// 	})
+// });
+
+// // create rules table in our database
+// app.get("/rules", function(req, res){
+// 	connection.query("SELECT * from rules", function(err, data){
+// 		res.render("index", {taco: data} );
+// 	})
+// });
+
+
+// app.get("/league", function(req, res){
+// 	connection.query("SELECT * from fml_artist ORDER by earnings DESC", function(err, data){
+// 		res.render("index", {taco: data} );
+// 	})
+// });
+
+
 // ******************************
 // POSTING TO MYSQL
 
 
 // POSTING TO MYSQL
 // ******************************
+
+	var routes = require("./controllers/fmlController.js");
+
+	app.use(routes);
      
       app.listen(PORT, function() {
 	  // Log (server-side) when our server has started

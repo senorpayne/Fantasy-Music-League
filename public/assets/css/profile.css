@@ -1,0 +1,111 @@
+body {
+			padding: 0px;
+			margin: 0px;
+			background-color: rgb(0,0,0);  
+			background-image: linear-gradient(-45deg, hsla(0,0%,0%,0), hsla(0,0%,0%,.05) );
+			background-size: 5px;
+
+			}
+			
+
+		#nav-main {
+			height: 300px;
+			width: 100%;
+			background: ;
+			background-image: url('https://lh3.googleusercontent.com/Udx6MDhifFrGeKoIrrtkzObY7OM4OBJhDRDq3mXvVf1tZSh7AFKWzGuqJlRCFFapgAEXiM8ONUkXeqZNJXRHMs5cSJvT_XrghicNz2s-R_zg3c_tGa-Azi-8003k4-eBOSta6FQa2kSdAKtP3TSEH56Rc4WhB7PJ3j4O-Mft03mw6K2z0lZqUcd5ejBS7NJdu75gX6UcKNpeJo65k4S0gQ5DYhNJjx8g_y_gE7yCmjhYGMGj0n5ULjHpkN7eGki9WkXDK5AOeUbohkGPM_9NKJBm12Wll2N5ZvVMpt5cu5Ko5-Tl8k-fbHpia4kQCUvwRIx7gIKzHthbB7k-V_jRGxmUm_dqrNqzGbeGDxbdH5EpHWalTIRtPSqQo__UOrbG-Mry9bJiB8E99HfJD4s3pNvnMVAUFRBFBCJEwOphG2-2I0884bWWjVstm8mE-zQur4X2vijQAdvDUxKtW5-n7IYwkFD8mqhd3DvNn3ET5un-WAeoXDnXBikOwIH3VV6qz-H9Jy0p2i2xV9Hqr1vv3PFcOXMOwj-2GC2J59Kutj8UttcIl1asWNoKtuL764uPmoj7bo3jXH9fvFa-R5QNgCqodIJLfTg_GVeDqw=w1366-h520-no');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			position: relative;
+			border-bottom: 6px solid silver;
+		}
+		
+		#set-container {
+			width: 92%;
+			margin-left: 4%;
+		}
+
+		#user-music-label-name {
+			
+			height: 60px;
+			text-align: center;
+			position: relative;
+			width: auto;
+			background-color: rgba(54, 45, 66, 0.8);
+			font-size: 200%;
+			padding-top: 5px; 
+			border-bottom: 2px solid silver;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			color: white;
+		}
+		
+		#select-container {
+			width: 70%;
+			height: auto;
+			float: left;
+		}
+
+		.admin-info-box {
+			height: auto;
+			width: 370px;
+			background: rgba(54, 45, 66, 0.8);
+			float: right;
+			margin-left: 1px;
+			margin-top: 1px;
+			border: 1px solid silver;
+			position: relative;
+			top: 10px;
+			padding-top: 5px;
+			border-radius: 5px;
+			font-size: 200%;
+			color: white;
+		}
+
+		.info-text-head {
+			color:silver;
+		}
+		
+		li {
+			text-decoration: none;
+			overflow: hidden;
+		}
+
+		#base {
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+    		width: 95%;
+    		position: relative;
+    		top: 10px;
+    		color: white;
+		}
+
+		#base tr {
+			height: 50px;
+			border-bottom: 2px solid silver;
+		}
+
+		#base th {
+			background-color: rgba(35, 27, 150, 0.4);
+    		color: white;
+    		border-top: 2px solid silver;
+		}
+
+		#base tr:nth-child(even){
+			background-color: rgba(50, 50, 58, 0.4);
+		}
+
+		#base tr:nth-child(odd){
+			background-color: rgba(55, 55, 61, 0.8);
+		}
+
+		#base tr:hover {
+			background-color: rgba(15, 15, 91, 0.4);
+		}
+		
+		#base th {
+			border-bottom: 2px solid silver;
+		}
+
+		#base td, th {
+			padding-left: 10px;
+		}
