@@ -25,9 +25,9 @@
 				</div>
 						<div id="user-name"><p>{{this.handle}}</p></div>
 								<div class="modal-btn" id="bio-modal" onclick="toggleinfo('#info-{{@index}}')"><p>About Artist</p></div>
-										<div class="modal-btn" data-id="{{id}}" data-signed="{{unsigned}}" id="accolades-{{@index}}">
+										<div class="modal-btn" data-id="{{id}}" data-signed="{{taken}}" id="accolades-{{@index}}" value={{this.id}}>
 										<p>
-										{{#if unsigned}}Sign Artist{{else}}Drop Artist{{/if}}
+										{{#if taken}}Drop Artist{{else}}Sign Artist{{/if}}
 										</p></div>
 
 											<div class="modal-info-box" id="info-{{@index}}">
