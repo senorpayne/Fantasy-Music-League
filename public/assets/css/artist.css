@@ -69,6 +69,19 @@ body {
 			border: 1px solid rgba(197, 204, 216, 0.4);
 		}
 
+		.modal-btn-1 {
+			height: 30px;
+			width: 150px;
+			background: rgba(35, 27, 150, 0.4);
+			position: relative;
+			float: left;
+			margin-left: 10px;
+			text-align: center;
+			border-radius: 15px;
+			left: 30px;
+			border: 1px solid rgba(197, 204, 216, 0.4);
+		}
+
 		.modal-btn:hover {
 			background: rgba(8, 91, 224, 0.8);
 		}

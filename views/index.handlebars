@@ -24,10 +24,10 @@
 				<p><strong>Listeners:</strong> {{this.listener}}</p>    
 				</div>
 						<div id="user-name"><p>{{this.handle}}</p></div>
-								<div class="modal-btn" id="bio-modal" onclick="toggleinfo('#info-{{@index}}')"><p>About Artist</p></div>
+								<div class="modal-btn-1" id="bio-modal" onclick="toggleinfo('#info-{{@index}}')"><p>About Artist</p></div>
 										<div class="modal-btn" data-id="{{id}}" data-signed="{{taken}}" id="accolades-{{@index}}" value={{this.id}}>
 										<p>
-										{{#if taken}}Drop Artist{{else}}Sign Artist{{/if}}
+										{{#if taken}}SIGNED!{{else}}Sign Artist{{/if}}
 										</p></div>
 
 											<div class="modal-info-box" id="info-{{@index}}">
