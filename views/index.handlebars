@@ -1,6 +1,14 @@
 <style screen="media">
 
+	body {
 
+			background-image: url("http://www.vanessaturner.com/wp-content/uploads/2016/09/grey-background-12.jpg");
+			background-size: 100%;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		
 </style>
 
 <div class="force-block"> 
@@ -10,14 +18,17 @@
 			</div>
 				<div class="info" id="info-modal">
 				<p><strong>Genre:</strong> {{this.genre}}</p>
-				<p><strong>Cost:</strong> ${{contractCost}}</p>
-				<p><strong>Chart Position:</strong> {{chartPosition}}</p> 
-				<p><strong>Play Count:</strong> {{playCount}}</p> 
-				<p><strong>Listeners:</strong> {{listener}}</p>    
+				<p><strong>Cost:</strong> ${{this.contractCost}}</p>
+				<p><strong>Chart Position:</strong> {{this.chartPosition}}</p> 
+				<p><strong>Play Count:</strong> {{this.playCount}}</p> 
+				<p><strong>Listeners:</strong> {{this.listener}}</p>    
 				</div>
 						<div id="user-name"><p>{{this.handle}}</p></div>
 								<div class="modal-btn" id="bio-modal" onclick="toggleinfo('#info-{{@index}}')"><p>About Artist</p></div>
-										<div class="modal-btn" id="accolades-{{@index}}" onclick="addTo('#accolades-{{@index}}')"><p>Sign Artist</p></div>
+										<div class="modal-btn" data-id="{{id}}" data-signed="{{unsigned}}" id="accolades-{{@index}}">
+										<p>
+										{{#if unsigned}}Sign Artist{{else}}Drop Artist{{/if}}
+										</p></div>
 
 											<div class="modal-info-box" id="info-{{@index}}">
 												<span class="close" onclick="toggleinfo('#info-{{@index}}')">
@@ -39,10 +50,7 @@
 		<script type="text/javascript">
 		
 
-			function toggleinfo(id){
-			console.log("button connected at least!")
-            $(id).toggle();
-        }
+		
 
         
 

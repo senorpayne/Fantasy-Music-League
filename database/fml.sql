@@ -12,6 +12,7 @@ CREATE TABLE fml_artist (
     bio VARCHAR(400) NULL,
     playCount INT(11) NULL,
     listeners INT (11) NULL,
+    taken BOOLEAN default false,
     PRIMARY KEY (artist_id)
 );
 
@@ -25,6 +26,8 @@ CREATE TABLE user_artist (
     bio VARCHAR(400) NULL,
     playCount INT(11) NULL,
     listeners INT (11) NULL,
+    taken BOOLEAN default false,
+    labelName VARCHAR (30),
     PRIMARY KEY (artist_id)
 );
 
