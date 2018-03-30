@@ -20,6 +20,11 @@ var fantasyML = {
     orm.update("fml_artist", objColVals, condition, function(res) {
       cb(res);
     });
+  },
+  updateThemAll: function(objColVals, cb) {
+    orm.updateAll("fml_artist", objColVals, function(res) {
+      cb(res);
+    });
   }
 
 // ********* REMEMBER TO ADD COMA ^^^ ONCE YOU UN-COMMENT THE LINES BELOW *************

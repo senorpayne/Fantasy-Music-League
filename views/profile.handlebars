@@ -7,9 +7,6 @@
 			background-size: 5px;
 
 			}
-		
-
-
 </style>
 
 <div id="nav-main">
@@ -17,7 +14,7 @@
 	</div>
 	
 	<div id="set-container">
-		<div id="user-music-label-name"><p id="user-label-name">THE USERS LABEL/TEAM NAME GOES HERE</p></div>
+		<div id="user-music-label-name"><p id="user-label-name">{{#each fml}} {{labelName}}{{/each}}</p></div>
 		 
 		 <div id="select-container">
 			 <table id="base">
@@ -34,7 +31,7 @@
 					<td>{{this.genre}}</td>
 					<td>{{this.handle}}</td>
 					<td>{{this.chartPosition}}</td>
-					<td>{{this.contractCost}}</td>
+					<td class="artCost" value="{{this.contractCost}}">{{this.contractCost}}</td>
 					<td>
 						<img style="width:35px;height:35px;" src="{{image}}">
 					</td>

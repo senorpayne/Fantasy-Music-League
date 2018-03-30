@@ -76,7 +76,21 @@ var orm = {
 
       cb(result);
     });
-  }
+  },
+  updateAll: function(table, objColVals, cb) {
+    var queryString = "UPDATE " + table;
+
+    queryString += " SET ";
+    queryString += objToSql(objColVals);
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
 
 // ********* REMEMBER TO ADD COMA ^^^ ONCE YOU UN-COMMENT THE LINES BELOW *************
 
@@ -130,7 +144,7 @@ var orm = {
 
   //     cb(result);
   //   });
-  // }
+  }
 };
 
 // Export the orm object for the model (fml.js).

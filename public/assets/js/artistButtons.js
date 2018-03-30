@@ -41,4 +41,24 @@
 			      }
 			    );
 			  });
-       
+       			
+       			$(".btn").on("click", function(event) {
+			    var id = 1;
+			    var recordLabel = $(this).data("labelNamed");
+
+			    var label = $('#record-label-name').val();
+			    var labelRecordNAme = {
+			      labelName: label
+			    };
+			    $.ajax("/profile/" + id, {
+			      type: "PUT",
+			      data: labelRecordNAme
+			    }).then(
+			      function() {
+			        console.log("changed artist contract to", recordLabel);
+			        // Reload the page to get the updated list
+			        // location.reload();
+			        res.redirect("localhost:3000/artist");
+			      }
+			    );
+			  });

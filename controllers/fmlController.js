@@ -1,9 +1,10 @@
 var express = require("express");
 var router = express.Router();
 var fantasyML = require("../models/fml.js");
+var path = require("path");
 
 router.get("/", function (req, res){
-	res.redirect("/artist");
+	res.redirect("/home");
 });
 
 router.get("/artist", function(req, res) {
@@ -20,8 +21,17 @@ router.get("/profile/user", function(req, res) {
 		var TheAllCall = {
       		fml: data
    		 };
-		res.render("teamSelect", TheAllCall);
+		res.render("profile", TheAllCall);
 	})
+});
+
+router.get("/home", function(req, res) {
+  fantasyML.all(function(data){
+    var TheAllCall = {
+          fml: data
+       };
+    res.render("home", TheAllCall);
+  })
 });
 
 router.put("/artist/:id", function(req, res) {
@@ -41,24 +51,29 @@ router.put("/artist/:id", function(req, res) {
   });
 });
 
-// router.get("/profile/label", function(req, res){
-// 	connection.query("SELECT * from user_artist", function(err, data){
-// 		res.render("teamSelect", {fml: data} );
-// 	})
-// });
+router.put("/profile/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
 
-// create rules table in our database
-// router.get("/rules", function(req, res){
-// 	connection.query("SELECT * from rules", function(err, data){
-// 		res.render("index", {taco: data} );
-// 	})
-// });
+  console.log("condition", condition);
 
-// router.get("/league", function(req, res){
-// 	connection.query("SELECT * from fml_artist ORDER by earnings DESC", function(err, data){
-// 		res.render("index", {taco: data} );
-// 	})
-// });
+  fantasyML.update({
+    labelName: req.body.labelName
+  }, condition, function(result) {
+    if (result.changedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
+
+router.get("/rules", function(req, res){
+	
+		res.render("rules");
+
+});
+
 
 // Export routes for server.js to use.
 module.exports = router;
