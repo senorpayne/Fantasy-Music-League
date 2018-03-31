@@ -43,7 +43,7 @@ router.put("/artist/:id", function(req, res) {
     taken: req.body.taken
   }, condition, function(result) {
     if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
+       
       return res.status(404).end();
     } else {
       res.status(200).end();
@@ -52,7 +52,7 @@ router.put("/artist/:id", function(req, res) {
 });
 
 router.put("/profile/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = "id = " + 1;
 
   console.log("condition", condition);
 
@@ -60,7 +60,7 @@ router.put("/profile/:id", function(req, res) {
     labelName: req.body.labelName
   }, condition, function(result) {
     if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
+     
       return res.status(404).end();
     } else {
       res.status(200).end();
@@ -74,43 +74,35 @@ router.get("/rules", function(req, res){
 
 });
 
-router.post('/api/artistPlayCount', function(req, res) {
-  // console.log(req.body);
+// router.post('/api/artistPlayCount', function(req, res) {
 
-  var names = Object.keys(req.body);
+//   var names = Object.keys(req.body);
 
-  for(var x = 0; x < names.length; x++){
+//   for(var x = 0; x < names.length; x++){
     
-    // x
-    fantasyML.insert("handle", names[x], function(result) {
-    // Send back the ID of the new quote
-    // console.log(result);
-    // return res.json({post: result});
+//     fantasyML.insert("handle", names[x], function(result) {
     
-    });
-  }
+//     });
+//   }
   
-})
+// })
 
-router.put("/api/artistPlayCount", function(req, res) {
+// router.put("/api/artistPlayCount", function(req, res) {
   
-  var names = Object.keys(req.body);
-  // console.log(req.body);
-  // var newState = !state;
-  // console.log(!state);
-  for(var j = 0; j < names.length; j++){
-    var condition = "artist_id = " + (j+1) + "";
-      console.log(names[j]);
-    var plays = parseInt(req.body[names[j]]);
-      // console.log(names[j]);
-    fantasyML.updateOne({
-        playCount: plays
-      }, condition, function(result) {
-        // console.log(result);
-    });
-  }
+//   var names = Object.keys(req.body);
   
-});
+//   for(var j = 0; j < names.length; j++){
+//     var condition = "artist_id = " + (j+1) + "";
+//       console.log(names[j]);
+//     var plays = parseInt(req.body[names[j]]);
+    
+//     fantasyML.updateOne({
+//         playCount: plays
+//       }, condition, function(result) {
+        
+//     });
+//   }
+  
+// });
 
-// Export routes for server.js to use.
 module.exports = router;

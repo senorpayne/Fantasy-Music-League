@@ -3,7 +3,7 @@ CREATE DATABASE fml_db;
 USE fml_db;
 
 CREATE TABLE fml_artist (
-    artist_id INT(3) auto_increment NOT NULL,
+    id INT(3) auto_increment NOT NULL,
     handle VARCHAR(50) NULL,
     genre VARCHAR(40) NULL,
     image VARCHAR(200) NULL,
@@ -13,7 +13,8 @@ CREATE TABLE fml_artist (
     playCount INT(11) NULL,
     listeners INT (11) NULL,
     taken BOOLEAN default false,
-    PRIMARY KEY (artist_id)
+    labelName VARCHAR (25) NULL,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE user_artist (
@@ -54,7 +55,7 @@ VALUES (
         "Coldplay",
         "Alternative/Indie",
         "http://coldplay.com/wp-content/uploads/2017/03/COLDPLAY-HYPNOTISED1000.jpg",
-        75, 11,
+        75, 8,
         "Kaleidoscope EP is the thirteenth EP by British rock band Coldplay. It was released worldwide on 14 July 2017. It serves as a companion piece to Coldplay's seventh studio album, A Head Full of Dreams."
         ),
         (
@@ -82,57 +83,59 @@ VALUES (
         "Bruno Mars",
         "Soul Funk Pop",
         "https://images.genius.com/56d4da82aa62ce39d20e5cc2f3d4fc3f.700x700x1.jpg",
-        100, 8,
+        100, 6,
         "24K Magic is the third studio album by American singer and songwriter Bruno Mars. It was released worldwide on November 18, 2016, by Atlantic Records. The follow-up to Mars's successful second album, Unorthodox Jukebox (2012), it explores genres similar to those of its predecessor, such as soul and funk."
         ),
         (
         "Nipsey Hussle",
         "Hip Hop",
         "http://ihussle.com/images/NIPSEY_DIRTY%20FIN-v1.jpg",
-        50, 25,
+        50, 14,
         "Victory Lap is the debut studio album by American rapper Nipsey Hussle. It was released on February 16, 2018 through All Money In No Money Out and Atlantic Records."
         ),
         (
         "Taylor Swift",
         "Pop",
         "https://store.taylorswift.com/mm5/graphics/00000001/reputation_cd_550x550.jpg",
-        50, 4,
+        50, 5,
         "Reputation is the sixth studio album by American singer-songwriter Taylor Swift. It was released on November 10, 2017, through Big Machine Records."
         ),
         (
         "Big K.R.I.T",
         "Hip Hop",
         "https://media.pitchfork.com/photos/59ef522bb3222c6c648bfe47/1:1/w_320/4eva%20is%20a%20mighty%20long%20time_big%20krit.jpg",
-        25, 44,
+        25, 13,
         "4eva Is a Mighty Long Time is the third studio album by American rapper Big K.R.I.T., released on October 27, 2017, by Multi Alumni and BMG Rights Management. A double album, it is his first full-length release since his departure from Def Jam in 2016."
         ),
         (
         "Post Malone",
         "Contemporary R&B",
         "http://musichubng.com/wp-content/uploads/2017/08/IFWT_PostMalone.jpg",
-        25, 13,
+        25, 10,
         "Stoney is the debut studio album by American rapper Post Malone. It was released on December 9, 2016, by Republic Records. The album features guest appearances from Justin Bieber, Kehlani, Quavo and 2 Chainz."
         ),
         (
         "Maroon 5",
         "Soft Rock",
         "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e5/23/c0/e523c07b-7bf5-4fa6-e504-b2afe1d20544/UMG_cvrart_00602557631333_01_RGB72_3000x3000_17UM1IM31407.jpg/268x0w.jpg",
-        50, 13,
+        50, 9,
         "Red Pill Blues is the sixth studio album by American pop rock band Maroon 5. It was released on November 3, 2017, by 222 and Interscope Records."
         ),
         (
         "Camila Cabello",
         "Pop",
         "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Camila_%28Official_Album_Cover%29_by_Camila_Cabello.png/220px-Camila_%28Official_Album_Cover%29_by_Camila_Cabello.png",
-        75, 14,
+        75, 11,
         "Camila is the eponymous debut studio album by Cuban-American singer Camila Cabello. It was released on January 12, 2018, through Epic Records, Syco and Sony Music. Work on the album began in January 2017, following Cabello's departure from Fifth Harmony, with whom she had released two studio albums."
         ),
         ("Selena Gomez",
         "Pop",
-        "http://radiocms-images.us1.eldarioncloud.com/resize/750/https://storage.googleapis.com/media.mwcradio.com/mimesis/2017-12/07/tmpZbLtcp.jpg",
-        25, 15,
+        "https://http2.mlstatic.com/selena-gomez-revival-deluxe-itunes-D_NQ_NP_802911-MLV20663536689_042016-F.jpg",
+        25, 12,
         "Revival is the second studio album by American singer Selena Gomez. It was released on October 9, 2015, by Interscope and Polydor Records. Preparation for the album began in 2014, when Gomez left her previous label Hollywood Records."
         )
+        
+       
         
 
 	   
