@@ -58,7 +58,7 @@
 			        console.log("changed artist contract to", recordLabel);
 			        // Reload the page to get the updated list
 			        // location.reload();
-			        res.redirect("localhost:3000/artist");
+			        res.redirect("/artist");
 			      }
 			    );
 			  });
