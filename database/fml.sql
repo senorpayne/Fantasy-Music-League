@@ -98,6 +98,40 @@ VALUES (
         "https://store.taylorswift.com/mm5/graphics/00000001/reputation_cd_550x550.jpg",
         50, 4,
         "Reputation is the sixth studio album by American singer-songwriter Taylor Swift. It was released on November 10, 2017, through Big Machine Records."
+        ),
+        (
+        "Big K.R.I.T",
+        "Hip Hop",
+        "https://media.pitchfork.com/photos/59ef522bb3222c6c648bfe47/1:1/w_320/4eva%20is%20a%20mighty%20long%20time_big%20krit.jpg",
+        25, 44,
+        "4eva Is a Mighty Long Time is the third studio album by American rapper Big K.R.I.T., released on October 27, 2017, by Multi Alumni and BMG Rights Management. A double album, it is his first full-length release since his departure from Def Jam in 2016."
+        ),
+        (
+        "Post Malone",
+        "Contemporary R&B",
+        "http://musichubng.com/wp-content/uploads/2017/08/IFWT_PostMalone.jpg",
+        25, 13,
+        "Stoney is the debut studio album by American rapper Post Malone. It was released on December 9, 2016, by Republic Records. The album features guest appearances from Justin Bieber, Kehlani, Quavo and 2 Chainz."
+        ),
+        (
+        "Maroon 5",
+        "Soft Rock",
+        "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/e5/23/c0/e523c07b-7bf5-4fa6-e504-b2afe1d20544/UMG_cvrart_00602557631333_01_RGB72_3000x3000_17UM1IM31407.jpg/268x0w.jpg",
+        50, 13,
+        "Red Pill Blues is the sixth studio album by American pop rock band Maroon 5. It was released on November 3, 2017, by 222 and Interscope Records."
+        ),
+        (
+        "Camila Cabello",
+        "Pop",
+        "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Camila_%28Official_Album_Cover%29_by_Camila_Cabello.png/220px-Camila_%28Official_Album_Cover%29_by_Camila_Cabello.png",
+        75, 14,
+        "Camila is the eponymous debut studio album by Cuban-American singer Camila Cabello. It was released on January 12, 2018, through Epic Records, Syco and Sony Music. Work on the album began in January 2017, following Cabello's departure from Fifth Harmony, with whom she had released two studio albums."
+        ),
+        ("Selena Gomez",
+        "Pop",
+        "http://radiocms-images.us1.eldarioncloud.com/resize/750/https://storage.googleapis.com/media.mwcradio.com/mimesis/2017-12/07/tmpZbLtcp.jpg",
+        25, 15,
+        "Revival is the second studio album by American singer Selena Gomez. It was released on October 9, 2015, by Interscope and Polydor Records. Preparation for the album began in 2014, when Gomez left her previous label Hollywood Records."
         )
         
 
